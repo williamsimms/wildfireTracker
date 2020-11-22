@@ -4,7 +4,7 @@ import { API_KEY } from '../utility/API'
 import LocationMarker from './LocationMarker'
 import './Map.scss'
 
-const Map = ({ center, zoom }) => {
+const Map = ({ eventData, center, zoom }) => {
   return (
     <div className='map'>
       <GoogleMapReact bootstrapURLKeys={{ key: API_KEY }} defaultCenter={center} defaultZoom={zoom}>

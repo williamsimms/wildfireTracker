@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Map from './components/Map'
+import Header from './components/Header'
+import Loader from './components/Loader'
 import './App.scss'
 
 const App = () => {
@@ -19,8 +21,9 @@ const App = () => {
     fetchEvents()
   }, [])
   return (
-    <div className='app'>
-      <Map />
+    <div>
+      <Header />
+      {!loading ? <Map eventData={eventData} /> : <Loader />}
     </div>
   )
 }
